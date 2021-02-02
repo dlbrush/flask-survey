@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Thanks
+{% endblock %}
+
+{% block content %}
+<h1>Thank you!</h1>
+<p>We've recorded your responses and we're praying they were positive.</p>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <section id="messages">
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </section>
+    {% endif %}
+{% endwith %}
+
+{% endblock %}
